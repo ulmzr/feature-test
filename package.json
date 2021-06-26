@@ -1,16 +1,22 @@
 {
-  "name": "malina-app",
-  "version": "1.0.0",
+  "name": "malina-fullstack-app",
+  "version": "0.0.1",
+  "description": "malina client and Derver server app, bundeled with esduild",
+  "main": "index.js",
   "scripts": {
-    "build": "node node_modules/malinajs/malina-esbuild",
-    "dev": "node node_modules/malinajs/malina-esbuild -w",
-    "start": "npx derver --production public",
-    "surge": "cd public && npx surge"
+    "build": "node app",
+    "dev": "node app --dev",
+    "start": "node dist"
   },
   "license": "MIT",
   "devDependencies": {
-    "derver": "^0.4.16",
     "esbuild": "^0.12.9",
-    "malinajs": "^0.6.30"
+    "malinajs": "^0.6.30",
+    "node-watch": "^0.7.1",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+   "derver": "^0.4.16",
+    "dotenv": "^10.0.0"
   }
 }
